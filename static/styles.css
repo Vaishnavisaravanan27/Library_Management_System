@@ -1,0 +1,174 @@
+/* Universal Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: black; /* Font color changed to black */
+}
+
+/* Background for All Pages */
+html, body {
+    height: 100%;
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/049/901/842/small_2x/soft-blurred-abstract-library-background-with-books-peaceful-reading-vibe-photo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Container for Login and Home Pages */
+.login-container, .home-container {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #222831; /* Updated border color */
+}
+
+/* Centered Text */
+h2, h3 {
+    text-align: center;
+    color: #222831; /* Updated heading color */
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Login Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="text"]:disabled {
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #222831; /* Border color for input fields */
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus {
+    border-color: #222831; /* Focus effect with updated border color */
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 12px;
+    background-color: #547792; /* Button color changed to #547792 */
+    color: white; /* Font color for button changed to white */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #405f6d; /* Darker button color on hover */
+}
+
+button[type="submit"] {
+    background-color:#28a745; /* Greenish-blue color for submit buttons */
+    border: 2px solid #547792; /* Update border color */
+}
+
+button[type="submit"]:hover {
+    background-color: #405f6d; /* Darker teal for hover effect */
+}
+
+/* Home Page - Search Bar and Book Details */
+.home-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"] {
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #222831; /* Border color for search box */
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #222831; /* Focus effect with updated border color */
+}
+
+/* Book Details Styling */
+.book-details {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.book-details img {
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.book-details p {
+    font-size: 18px;
+    color: #333;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+/* Borrow Form */
+input[type="text"], input[type="date"] {
+    padding: 12px;
+    margin: 12px 0;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #222831; /* Border color for borrow form fields */
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: #28a745; /* Button color changed to #547792 */
+    color: white; /* Font color for button changed to white */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #405f6d; /* Darker button color on hover */
+}
+
+/* Message Box */
+.message {
+    text-align: center;
+    font-size: 18px;
+    color: #28a745;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container, .home-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}

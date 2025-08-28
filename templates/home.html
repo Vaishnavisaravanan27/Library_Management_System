@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="home-container">
+        <h2>Library Home</h2>
+
+        <!-- Book Search Form -->
+        <form action="/search" method="POST">
+            <input type="text" name="book_name" placeholder="Search for a book" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Display book details if found -->
+        {% if book %}
+        <div class="book-details">
+            <img src="{{ book.image }}" alt="{{ book.name }}">
+            <p><strong>Book Name:</strong> {{ book.name }}</p>
+            <p><strong>Available:</strong> {{ 'Yes' if book.available else 'No' }}</p>
+
+            <!-- If the book is available, show Borrow Form -->
+            {% if book.available %}
+            <form action="/borrow" method="POST">
+                <input type="text" name="student_name" placeholder="Your Name" required>
+                <input type="text" name="student_id" placeholder="Student ID" required>
+                <input type="hidden" name="book_name" value="{{ book.name }}">
+                <button type="submit">Borrow</button>
+            </form>
+            {% else %}
+            <p>This book is currently not available.</p>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <!-- Display Success or Error Message -->
+        {% if message %}
+        <div class="message">{{ message }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
