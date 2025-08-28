@@ -26,4 +26,3 @@ The **Library Management System** built with Flask provides a simple yet effecti
 It demonstrates how Python and Flask can be used to build a lightweight web application with real-world use cases.  
 This project can be further extended by integrating a database like **SQLite or MySQL**, adding user authentication, and implementing advanced features such as search, analytics, and role-based access.  
 Overall, it serves as a great starting point for learning Flask and developing scalable web applications.
-
